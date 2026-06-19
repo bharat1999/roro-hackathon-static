@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Roro Builder's Day — Everyone's a builder now</title>
+<title>Roro Builder's Day — Optimised development</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,6 +101,21 @@
   .stat .v{font-size:40px; font-weight:800; letter-spacing:-0.03em; line-height:1;}
   .stat .k{font-size:12.5px; color:var(--n500); margin-top:9px; letter-spacing:.02em;}
 
+  /* ---------- STACK ---------- */
+  .stack{padding:88px 0 0;}
+  .stack h2{font-size:clamp(28px,4vw,46px); font-weight:700; letter-spacing:-0.025em; max-width:20ch;}
+  .stack .intro{font-size:16px; color:var(--n600); line-height:1.6; max-width:62ch; margin-top:16px;}
+  .stack-loop{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--n100);
+    border:1px solid var(--n100); border-radius:8px; overflow:hidden; margin-top:40px;}
+  .loop-step{background:var(--white); padding:22px 20px;}
+  .loop-step .ls-n{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--n400); margin-bottom:8px;}
+  .loop-step .ls-t{font-size:16px; font-weight:700; letter-spacing:-0.01em; margin-bottom:6px;}
+  .loop-step .ls-d{font-size:13.5px; color:var(--n600); line-height:1.5;}
+  .tool-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:36px;}
+  .tool-card{border:1px solid var(--n100); border-radius:8px; padding:18px 20px;}
+  .tool-card .tt{font-size:15px; font-weight:700; letter-spacing:-0.01em; margin-bottom:6px;}
+  .tool-card .td{font-size:13.5px; color:var(--n600); line-height:1.5;}
+
   /* ---------- FORMAT ---------- */
   .format{padding:88px 0 0;}
   .format h2{font-size:clamp(28px,4vw,46px); font-weight:700; letter-spacing:-0.025em; max-width:16ch;}
@@ -120,6 +135,16 @@
     line-height:.95; color:var(--white); white-space:nowrap;}
   .rule-card p{font-size:15px; color:var(--n200); line-height:1.6;}
   .rule-card p b{color:var(--white); font-weight:600;}
+
+  /* ---------- RULES ---------- */
+  .rules{padding:88px 0 0;}
+  .rules h2{font-size:clamp(28px,4vw,46px); font-weight:700; letter-spacing:-0.025em; max-width:18ch;}
+  .rules .intro{font-size:16px; color:var(--n600); line-height:1.6; max-width:58ch; margin-top:16px;}
+  .rules-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:40px;}
+  .rule-item{border:1px solid var(--n100); border-radius:9px; padding:22px 22px 24px;}
+  .rule-item .rn{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--n400); margin-bottom:10px;}
+  .rule-item .rh{font-size:17px; font-weight:700; letter-spacing:-0.01em; margin-bottom:8px;}
+  .rule-item .rd{font-size:14.5px; color:var(--n600); line-height:1.55;}
 
   /* ---------- CATEGORIES ---------- */
   .cats{padding:88px 0 0;}
@@ -166,6 +191,9 @@
     .step{grid-template-columns:64px 1fr; row-gap:6px;}
     .step .d{grid-column:1 / -1;}
     .rule-card{grid-template-columns:1fr; gap:14px;}
+    .rules-grid{grid-template-columns:1fr;}
+    .stack-loop{grid-template-columns:1fr 1fr;}
+    .tool-grid{grid-template-columns:1fr;}
     .cat-grid{grid-template-columns:1fr;}
     .idea-grid{grid-template-columns:1fr;}
     .rail-cap{font-size:10px;}
@@ -211,10 +239,12 @@
     <span class="nav-brand">Roro Builder's Day</span>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#stack">Stack</a>
       <a href="#format">Format</a>
+      <a href="#rules">Rules</a>
       <a href="#ideas">Ideas</a>
       <a href="#faq">FAQ</a>
-      <a href="#closing" class="nav-cta">Bring a task</a>
+      <a href="#closing" class="nav-cta">Join in</a>
     </div>
   </nav>
 
@@ -222,17 +252,18 @@
   <header class="hero" id="home">
     <div class="wrap">
       <div class="roro-logo hero-logo reveal d1" role="img" aria-label="Roro"></div>
-      <div class="eyebrow reveal d1">Roro Builder's Day</div>
-      <h1 class="reveal d2">Everyone's a builder now.</h1>
+      <div class="eyebrow reveal d1">Roro Builder's Day · Optimised development</div>
+      <h1 class="reveal d2">Build faster. Validate what ships.</h1>
       <p class="lead reveal d3">
-        Developers already know they're builders. This afternoon is when <b>everyone else</b>
-        discovers they are too — one real task, one working tool, built by you in a single sitting.
+        This isn't just about ending up with a tool. It's an internal hackathon to learn the
+        <b>AI ecosystem</b> — Claude Code, Cursor, agents, MCP, automations — wired together so
+        you develop faster <b>and</b> prove it works before you demo.
       </p>
       <div class="chips reveal d4">
-        <span class="chip"><b>2–3 hours</b></span>
-        <span class="chip"><b>Whole</b> team</span>
-        <span class="chip"><b>Mixed</b> groups</span>
-        <span class="chip">Bring one annoying task</span>
+        <span class="chip"><b>Optimised</b> development</span>
+        <span class="chip"><b>AI</b> stack</span>
+        <span class="chip"><b>Build</b> + validate</span>
+        <span class="chip">Bring one real task</span>
       </div>
       <div class="date-chips reveal d4">
         <span class="date-chip"><span class="dc-label">Date</span><span class="dc-val">TBC</span></span>
@@ -242,20 +273,23 @@
       </div>
 
       <div class="rail reveal d5">
-        <div class="eyebrow" style="color:var(--n400)">One session, three moves</div>
+        <div class="eyebrow" style="color:var(--n400)">Plan · build · validate · demo</div>
         <div class="rail-track">
           <div class="rail-fill"></div>
-          <div class="rail-node" style="left:8%">
-            <span class="rail-cap">Pick</span><span class="rail-dot"></span><span class="rail-time">0:00</span>
+          <div class="rail-node" style="left:6%">
+            <span class="rail-cap">Plan</span><span class="rail-dot"></span><span class="rail-time">0:00</span>
           </div>
-          <div class="rail-node" style="left:50%">
-            <span class="rail-cap">Build</span><span class="rail-dot"></span><span class="rail-time">0:20</span>
+          <div class="rail-node" style="left:38%">
+            <span class="rail-cap">Build</span><span class="rail-dot"></span><span class="rail-time">0:10</span>
           </div>
-          <div class="rail-node" style="left:92%">
+          <div class="rail-node" style="left:70%">
+            <span class="rail-cap">Validate</span><span class="rail-dot"></span><span class="rail-time">1:50</span>
+          </div>
+          <div class="rail-node" style="left:94%">
             <span class="rail-cap">Demo</span><span class="rail-dot"></span><span class="rail-time">2:10</span>
           </div>
         </div>
-        <div class="rail-ends"><span>Start</span><span>Demo day energy by hour three</span></div>
+        <div class="rail-ends"><span>Kickoff</span><span>Optimised development in one sitting</span></div>
       </div>
     </div>
   </header>
@@ -264,42 +298,104 @@
   <section class="about" id="about">
     <div class="wrap">
       <div class="sec-label">About the day</div>
-      <h2>Everybody's a builder — devs already knew; now the whole team gets to feel it.</h2>
+      <h2>The goal isn't a side project — it's optimised development with AI.</h2>
 
       <div class="about-grid">
         <div>
-          <div class="col-label">Where we are</div>
+          <div class="col-label">What we're practising</div>
           <p>
-            We're remote-first, and two things keep coming up: people don't cross paths
-            enough, and the ones who aren't engineers haven't really felt what AI can do for their
-            own work.
+            <b>Optimised development</b> means picking the right AI tools for each step — planning,
+            building, checking, shipping — and chaining them so the whole loop is faster than doing
+            it the old way.
           </p>
           <p>
-            Meanwhile the developers have quietly changed how they work — drafting, summarising and
-            shipping with AI as a co-pilot. That same leverage applies to recruiting, marketing,
-            design and QA. Most people just haven't had the push to try.
+            Developers already live in this world: Cursor agents, Claude Code, MCP servers, automations.
+            This afternoon is when the rest of the team learns the same muscle — on a real task they
+            own, with engineers and designers as co-pilots when code is involved.
           </p>
         </div>
         <div>
-          <div class="col-label">The bet</div>
+          <div class="col-label">What you leave with</div>
           <p>
-            Give everyone a focused 2–3 hours, a real task they do every week, and the tools to build
-            something that handles it. Not a polished product — a working thing you'd use on Monday.
-            No category required. No lane required. Just your task.
+            One working thing you'd use on Monday — yes. But the real output is a repeatable workflow:
+            which tool for which job, how you validated it, and what you'd keep using next week.
           </p>
           <p>
-            Mixed teams mean a marketer and a backend dev end up at the same table. The cross-team
-            connection isn't a separate goal we bolt on; it happens because building together is the
-            fastest way to learn.
+            Mixed teams mean a marketer and a backend dev compare notes on the same stack. The
+            cross-team connection happens because you're all learning to develop differently — not
+            because we scheduled a networking break.
           </p>
         </div>
       </div>
 
       <div class="stats">
-        <div class="stat"><div class="v">2–3<span style="font-size:18px"> hrs</span></div><div class="k">One sitting, start to demo</div></div>
-        <div class="stat"><div class="v">1</div><div class="k">Working tool each</div></div>
+        <div class="stat"><div class="v">2–3<span style="font-size:18px"> hrs</span></div><div class="k">Plan, build, validate, demo</div></div>
+        <div class="stat"><div class="v">AI</div><div class="k">Stack, not single prompt</div></div>
+        <div class="stat"><div class="v">1</div><div class="k">Validated workflow each</div></div>
         <div class="stat"><div class="v">Mixed</div><div class="k">Cross-functional groups</div></div>
-        <div class="stat"><div class="v">0</div><div class="k">Lines of code required</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STACK ================= -->
+  <section class="stack" id="stack">
+    <div class="wrap">
+      <div class="sec-label">Optimised development</div>
+      <h2>The AI stack you'll wire together.</h2>
+      <p class="intro">
+        Optimised development isn't one chat window and hope. It's choosing the right layer for each
+        step — agents to plan, IDE to build, MCP to connect context, automations to run it again —
+        then validating the output before you demo.
+      </p>
+
+      <div class="stack-loop">
+        <div class="loop-step">
+          <div class="ls-n">01</div>
+          <div class="ls-t">Plan</div>
+          <div class="ls-d">Break the task down. Pick your toolchain. Decide what "done" and "validated" look like.</div>
+        </div>
+        <div class="loop-step">
+          <div class="ls-n">02</div>
+          <div class="ls-t">Build</div>
+          <div class="ls-d">Ship in the time box using the AI ecosystem — not brute force, not one generic prompt.</div>
+        </div>
+        <div class="loop-step">
+          <div class="ls-n">03</div>
+          <div class="ls-t">Validate</div>
+          <div class="ls-d">Run it on a real example. Check the output. Fix what breaks. Prove it works.</div>
+        </div>
+        <div class="loop-step">
+          <div class="ls-n">04</div>
+          <div class="ls-t">Demo</div>
+          <div class="ls-d">Show the thing live and walk through the stack you used — what sped you up, what you'd keep.</div>
+        </div>
+      </div>
+
+      <div class="tool-grid">
+        <div class="tool-card">
+          <div class="tt">Claude Code</div>
+          <div class="td">Agentic builds from the terminal — great for scripts, refactors, and shipping small tools fast.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tt">Cursor IDE</div>
+          <div class="td">The editor layer — inline edits, codebase context, and the home base for code-heavy work.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tt">Cursor agents</div>
+          <div class="td">Delegate multi-step work — explore, implement, and iterate without doing every click yourself.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tt">MCP servers</div>
+          <div class="td">Plug in live context — docs, tickets, repos, APIs — so the AI works from real data, not guesses.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tt">Claude Projects</div>
+          <div class="td">No-code and light-code workflows — knowledge bases, drafts, and repeatable prompts with memory.</div>
+        </div>
+        <div class="tool-card">
+          <div class="tt">Automations</div>
+          <div class="td">Zapier, hooks, scheduled runs — turn what you built into something that keeps working on Monday.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -310,50 +406,92 @@
       <div class="sec-label">The format</div>
       <h2>How the session runs.</h2>
       <p class="intro">
-        One room (in person or beamed in), one clock. We kick off together, build heads-down, then
-        everyone demos. Times are a guide — the build block is the heart of it.
+        One room (in person or beamed in), one clock. Form your team when you register — ideally
+        mixed across functions — then kick off, build with the AI stack, validate on a real example,
+        and demo what worked. The build block is the heart of it; validation is not optional.
       </p>
 
       <div class="steps">
         <div class="step">
           <div class="t">0:00</div>
           <div><div class="h">Kickoff</div><div class="dur">10 min</div></div>
-          <div class="d">The why, the one rule, and a fast tour of the tools. Pick the task you'll attack.</div>
+          <div class="d">Optimised development — what it means, the tool stack, and the rules. Lock your task and sketch your toolchain.</div>
         </div>
         <div class="step">
           <div class="t">0:10</div>
-          <div><div class="h">Find your lane</div><div class="dur">10 min</div></div>
-          <div class="d">Grab a teammate or two — ideally from another function — and lock your one idea.</div>
-        </div>
-        <div class="step">
-          <div class="t">0:20</div>
-          <div><div class="h">Build</div><div class="dur">90 min</div></div>
-          <div class="d">The main event. Devs and designers float as co-pilots; the task owner drives.</div>
+          <div><div class="h">Build</div><div class="dur">100 min</div></div>
+          <div class="d">Chain the AI ecosystem: agents to plan, Cursor or Claude Code to ship, MCP for context, automations where they fit. Task owner drives.</div>
         </div>
         <div class="step">
           <div class="t">1:50</div>
-          <div><div class="h">Prep your demo</div><div class="dur">20 min</div></div>
-          <div class="d">Get it working on one real example and plan a two-minute show-and-tell.</div>
+          <div><div class="h">Validate &amp; prep demo</div><div class="dur">20 min</div></div>
+          <div class="d">Run it on one real example. Fix what breaks. Plan a two-minute demo of the output <em>and</em> the stack you used.</div>
         </div>
         <div class="step">
           <div class="t">2:10</div>
           <div><div class="h">Demos</div><div class="dur">40 min</div></div>
-          <div class="d">Two minutes each. The person whose task it was presents — every time.</div>
+          <div class="d">Two minutes each — live output, live validation, quick walkthrough of which AI tools sped you up.</div>
         </div>
         <div class="step">
           <div class="t">2:50</div>
           <div><div class="h">Recognition &amp; keep-list</div><div class="dur">10 min</div></div>
-          <div class="d">Shout-outs, a quick vote, and a note of which tools we actually keep using.</div>
+          <div class="d">Shout-outs, a quick vote, and a note of which workflows and tools we actually keep using.</div>
         </div>
       </div>
 
       <div class="rule-card">
-        <div class="big">One&nbsp;rule.</div>
+        <div class="big">The&nbsp;point.</div>
         <p>
-          <b>Whoever feels the task builds the tool.</b> Engineers and designers are co-pilots here —
-          they help people get unstuck, they don't take the keyboard. And the owner demos. That's how
-          "I can do this too" actually lands.
+          <b>Optimised development, not just a deliverable.</b> You're judged on how you used the AI
+          ecosystem to build faster <em>and</em> validate what you shipped — plus whoever feels the
+          task still drives and demos.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RULES ================= -->
+  <section class="rules" id="rules">
+    <div class="wrap">
+      <div class="sec-label">Hackathon rules</div>
+      <h2>Internal event. AI stack. Validated output.</h2>
+      <p class="intro">
+        Roro Builder's Day is an internal company hackathon — for Roro people only. You bring a real
+        task, build with the AI ecosystem in an optimised way, validate it on a live example, and
+        demo both the result and the workflow.
+      </p>
+
+      <div class="rules-grid">
+        <div class="rule-item">
+          <div class="rn">01</div>
+          <div class="rh">Teams form at registration</div>
+          <div class="rd">Sign up with your teammates (2–4 people, ideally cross-functional). No separate team-formation block on the day — we start building right after kickoff.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rn">02</div>
+          <div class="rh">Use the AI ecosystem</div>
+          <div class="rd">This hackathon is optimised development in practice — Claude Code, Cursor IDE, Cursor agents, MCP servers, Claude Projects, automations. Pick the right tool for each step; don't default to one chat window.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rn">03</div>
+          <div class="rh">One task, one validated workflow</div>
+          <div class="rd">Each team picks one real weekly task and ships one working solution for it — plus the toolchain you'd actually reuse. Not a pitch deck.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rn">04</div>
+          <div class="rh">Validate before you demo</div>
+          <div class="rd">Run it on a real example in the validation block. Fix what breaks. Your demo shows the output working live — not slides about what you might build.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rn">05</div>
+          <div class="rh">Whoever feels the task builds it</div>
+          <div class="rd">Engineers and designers are co-pilots: they help people get unstuck with the stack, they don't take the keyboard. The task owner drives and demos.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rn">06</div>
+          <div class="rh">Show your stack in the demo</div>
+          <div class="rd">Two minutes: the thing working, how you validated it, and which AI tools sped you up. We keep what lands on the keep-list — workflows, not just one-offs.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -364,57 +502,41 @@
       <div class="sec-label">Categories</div>
       <h2>Need inspiration?</h2>
       <p class="intro">
-        Don't have a lane? You don't need one. These are starting points by function — prompts, not
-        fences. The best builds pair someone who feels the problem with someone who can wire it up.
+        Pick the lane closest to your role — prompts, not fences. Every lane still runs on optimised
+        development: the AI stack changes by role, but you always build, validate, and demo the workflow.
         &nbsp;<a href="#ideas" style="color:var(--black);font-weight:600;text-decoration:underline;">See starter ideas →</a>
       </p>
 
       <div class="cat-grid">
         <div class="cat">
-          <div class="cat-top"><span class="cat-name">People &amp; HR</span><span class="cat-tag">No-code</span></div>
+          <div class="cat-top"><span class="cat-name">People &amp; Marketing</span><span class="cat-tag">No-code</span></div>
           <div class="cat-body">
-            <p>Take the repetitive people-ops work — answering the same questions, screening, recognising wins — off your plate.</p>
-            <div class="cat-egs"><span class="eg">Onboarding buddy</span><span class="eg">Policy Q&amp;A bot</span><span class="eg">Shout-out drafter</span></div>
+            <p>People-ops and go-to-market work on repeat — build with Claude Projects and automations, then validate on a real thread or doc.</p>
+            <div class="cat-egs"><span class="eg">Policy Q&amp;A bot</span><span class="eg">Content repurposer</span><span class="eg">Shout-out drafter</span><span class="eg">Brand-voice checker</span></div>
           </div>
         </div>
 
         <div class="cat">
-          <div class="cat-top"><span class="cat-name">Marketing</span><span class="cat-tag">No-code</span></div>
+          <div class="cat-top"><span class="cat-name">Design</span><span class="cat-tag">Light code</span></div>
           <div class="cat-body">
-            <p>Turn one piece of content into many, keep an eye on competitors, and stay on brand without the blank page.</p>
-            <div class="cat-egs"><span class="eg">Content repurposer</span><span class="eg">Brand-voice checker</span><span class="eg">Lead one-pager</span></div>
+            <p>Critiques, copy, and handoffs — prototype in Cursor with agents, validate by clicking through on a real brief.</p>
+            <div class="cat-egs"><span class="eg">Design critique agent</span><span class="eg">UX copy variants</span><span class="eg">Brief → prototype</span></div>
           </div>
         </div>
 
         <div class="cat">
-          <div class="cat-top"><span class="cat-name">UI / UX</span><span class="cat-tag">No-code</span></div>
+          <div class="cat-top"><span class="cat-name">Engineering</span><span class="cat-tag">Code</span></div>
           <div class="cat-body">
-            <p>Faster critiques, sharper copy, cleaner handoffs — and clickable prototypes from a plain-words description.</p>
-            <div class="cat-egs"><span class="eg">Design critique agent</span><span class="eg">UX copy writer</span><span class="eg">Instant prototype</span></div>
+            <p>Ship a script, CLI, or internal tool — Claude Code, Cursor, MCP for repo context, validate against real PRs or logs.</p>
+            <div class="cat-egs"><span class="eg">PR summariser</span><span class="eg">Docs Q&amp;A</span><span class="eg">Release-notes generator</span><span class="eg">Error / crash digester</span></div>
           </div>
         </div>
 
         <div class="cat">
-          <div class="cat-top"><span class="cat-name">Web Team</span><span class="cat-tag">Light code</span></div>
+          <div class="cat-top"><span class="cat-name">QA</span><span class="cat-tag">Code</span></div>
           <div class="cat-body">
-            <p>Small tools for your own day-to-day: summarise PRs, explain errors, and ask your own docs questions.</p>
-            <div class="cat-egs"><span class="eg">PR summariser</span><span class="eg">Project docs Q&amp;A</span><span class="eg">Standup writer</span></div>
-          </div>
-        </div>
-
-        <div class="cat">
-          <div class="cat-top"><span class="cat-name">Mobile Team</span><span class="cat-tag">Light code</span></div>
-          <div class="cat-body">
-            <p>Make releases and feedback less painful — notes from commits, review digests, crash clustering.</p>
-            <div class="cat-egs"><span class="eg">Release-notes generator</span><span class="eg">Review digest</span><span class="eg">Crash clusterer</span></div>
-          </div>
-        </div>
-
-        <div class="cat">
-          <div class="cat-top"><span class="cat-name">QA</span><span class="cat-tag">No-code</span></div>
-          <div class="cat-body">
-            <p>Generate test cases, format clean bug reports, and assemble a go / no-go summary in seconds.</p>
-            <div class="cat-egs"><span class="eg">Test-case generator</span><span class="eg">Bug-report formatter</span><span class="eg">Release-readiness</span></div>
+            <p>Automate repetitive testing — agents to scaffold, code to run checks, validate on a real ticket or release.</p>
+            <div class="cat-egs"><span class="eg">Test-case scaffold</span><span class="eg">Smoke-test runner</span><span class="eg">Bug-report formatter</span><span class="eg">Release checklist script</span></div>
           </div>
         </div>
       </div>
@@ -427,56 +549,57 @@
       <div class="sec-label">Ideas</div>
       <h2>Start anywhere.</h2>
       <p class="intro">
-        Eight prompts anyone can pick up — no category required. For role-specific sparks,
-        see the <a href="#categories">categories above</a>. Or bring the task that annoys you most.
+        Eight prompts anyone can pick up — no category required. Each one is a chance to practise
+        optimised development: pick a stack, build, validate on a real example.
+        See <a href="#categories">categories</a> for role-specific sparks, or bring the task that annoys you most.
       </p>
 
       <div class="idea-grid" id="generic-ideas">
         <div class="idea-card">
           <div class="ic-t">Meeting notes → action items</div>
           <div class="ic-d">Paste rough notes; get owners, deadlines, and a follow-up email draft.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Project · validate on real notes</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Email reply drafter</div>
           <div class="ic-d">Paste an inbound email; get a reply in your voice, ready to edit and send.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Project · automation hook</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Weekly status writer</div>
           <div class="ic-d">Rough bullets in; polished update out — for your manager, client, or team.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Project · validate against last week</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Process doc from chaos</div>
           <div class="ic-d">Describe how you do something today; get a clean SOP someone else could follow.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Cursor agent · MCP for docs</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Spreadsheet explainer</div>
           <div class="ic-d">Paste a table; ask questions in plain English and get answers with cell references.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Code · real spreadsheet</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Client / vendor FAQ</div>
           <div class="ic-d">Load the questions you answer every week; get instant draft answers to refine.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Project · test 5 real questions</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Personal knowledge base</div>
           <div class="ic-d">Dump notes and decisions; ask "what did we decide about X?" and get a sourced answer.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Claude Project · MCP · validate sourcing</div>
         </div>
         <div class="idea-card">
           <div class="ic-t">Decision helper</div>
           <div class="ic-d">Describe a choice you're stuck on; get pros, cons, and a simple recommendation.</div>
-          <div class="ic-b"><b>Build with</b> Claude Project</div>
+          <div class="ic-b"><b>Stack</b> Cursor agent · real decision brief</div>
         </div>
       </div>
 
       <p class="ideas-note">
-        HR, marketing, design, web, mobile, and QA each have more examples in
-        <a href="#categories">categories</a> — onboarding bots, PR summarisers, test-case generators, and the rest.
+        People &amp; marketing, design, engineering, and QA each have more examples in
+        <a href="#categories">categories</a> — all built the same way: AI stack in, validated output out.
       </p>
 
       <div class="openlane">
@@ -484,8 +607,7 @@
         <h3>Don't see your task? Build it anyway.</h3>
         <p>
           These lists are starting points, not fences. The task that bugs <b>you</b> most is the best
-          idea in the room — any team, any tool, no category required. If it saves you time next week,
-          it counts.
+          idea in the room — pick your stack, validate it live, show what you'd keep using next week.
         </p>
         <div class="ol-chips">
           <span class="c">Automate a weekly report</span>
@@ -506,36 +628,36 @@
       <p class="intro">The short version, before you bring your task.</p>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <div class="fq">I don't code — can I still build something?</div>
-          <div class="fa">Yes — that's the whole point. Claude Projects and no-code tools are built for this. Engineers and designers float as co-pilots; they help you get unstuck, they don't take the keyboard.</div>
+          <div class="fq">What is optimised development?</div>
+          <div class="fa">Using the AI ecosystem — Claude Code, Cursor, agents, MCP, automations — with the right tool for each step, so you build faster <em>and</em> validate what you ship. The hackathon forces you to practise that loop, not just end up with a side project.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="fq">I don't code — can I still participate?</div>
+          <div class="fa">Yes. Optimised development isn't code-only — Claude Projects, automations, and agent-assisted workflows count. Engineers and designers co-pilot on the stack; the task owner still drives and demos.</div>
         </div>
         <div class="faq-item reveal">
           <div class="fq">Do I need to pick a category or team?</div>
-          <div class="fa">No. Generic ideas and your own task both count. The category cards are optional prompts — the only requirement is one real task and one working tool.</div>
+          <div class="fa">No. Generic ideas and your own task both count. Categories are optional prompts — the requirement is one real task, an AI toolchain, and a validated result.</div>
         </div>
         <div class="faq-item reveal">
-          <div class="fq">Can I work with someone from another function?</div>
-          <div class="fa">Encouraged. Mixed groups are the point — a marketer and a backend dev at the same table is exactly what we're going for.</div>
+          <div class="fq">How do teams work?</div>
+          <div class="fa">Form your team when you register — 2–4 people, ideally mixed across functions. Compare notes on the stack, not just the output. No separate team-formation time on the day.</div>
         </div>
         <div class="faq-item reveal">
           <div class="fq">What counts as "done"?</div>
-          <div class="fa">Working on one real example. You'll demo it in two minutes — show the thing doing the job, not slides about the thing.</div>
+          <div class="fa">Working on one real example, validated in the session. Demo the output live, walk through how you used the AI tools, and show what you'd keep using next week.</div>
         </div>
         <div class="faq-item reveal">
-          <div class="fq">What's the one rule?</div>
-          <div class="fa"><b>Whoever feels the task builds the tool.</b> The task owner drives, the co-pilots assist, and the owner demos. That's how "I can do this too" actually lands.</div>
+          <div class="fq">What tools do I have to use?</div>
+          <div class="fa">Claude Code, Cursor IDE, Cursor agents, MCP servers, Claude Projects, and automations — pick what fits your task. The bar is an optimised stack, not a single generic chat.</div>
         </div>
         <div class="faq-item reveal">
           <div class="fq">Can I prep before the session?</div>
-          <div class="fa">Light prep is fine — gather docs, sketch the task, think about your demo example. The main build happens in the session.</div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="fq">What tools can I use?</div>
-          <div class="fa">Claude Projects, Cursor, artifacts, Zapier — whatever ships in 2–3 hours. If it works on Monday, it counts.</div>
+          <div class="fa">Light prep is fine — gather docs, sketch the task, think about your toolchain. The build and validation happen in the session.</div>
         </div>
         <div class="faq-item reveal">
           <div class="fq">What happens after?</div>
-          <div class="fa">We note which tools land on the keep-list — the ones the team actually keeps using. No pressure to polish; pressure to prove it's useful.</div>
+          <div class="fa">We note which workflows and tools land on the keep-list — the ones the team actually keeps using. Pressure to prove it's useful, not to polish a demo deck.</div>
         </div>
       </div>
     </div>
@@ -546,17 +668,18 @@
     <div class="wrap">
       <div class="roro-logo footer-logo" role="img" aria-label="Roro"></div>
       <div class="eyebrow">Roro Builder's Day</div>
-      <h2>Bring a task. Leave a builder.</h2>
+      <h2>Pick a stack. Ship it. Prove it.</h2>
       <p>
-        Whatever role you're in, there's one thing you do every week that an afternoon could fix.
-        Build it today. Use it Monday. That's the whole brief.
+        Whatever role you're in, there's a weekly task the AI ecosystem could handle faster —
+        if you wire the tools right and validate the output. That's optimised development.
+        Learn it today. Reuse it Monday.
       </p>
       <div class="do">
-        <span class="pill">Pick your task</span>
-        <span class="pill">Build the thing</span>
-        <span class="pill">Demo it</span>
+        <span class="pill">Plan your stack</span>
+        <span class="pill">Build + validate</span>
+        <span class="pill">Demo the workflow</span>
       </div>
-      <p class="foot">One task · one tool · 2–3 hours · whole team. Date and room to be confirmed.</p>
+      <p class="foot">Optimised development · AI stack · 2–3 hours · whole team. Date and room to be confirmed.</p>
     </div>
   </section>
 
